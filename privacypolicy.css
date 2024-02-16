@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Handjet:wght@100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+body{
+  background: #292929;
+  color: white;
+}
+
+header{
+  width: 100%;
+  height:  10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px 50px;
+}
+
+
+
+header nav{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+  width: 60%;
+}
+
+header nav a{
+  color: white;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  transition: transform .3s ease-in-out;
+  position: relative;
+  padding: 3px;
+}
+
+header nav a::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: white;
+  bottom: 0;
+  left: 0;
+  transition: transform .3s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: right;
+  
+}
+
+header nav a:hover::after{
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.button {
+  display: block;
+  position: relative;
+  width: 56px;
+  height: 56px;
+  margin: 0;
+  overflow: hidden;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+}
+
+.button:before,
+.button:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  inset: 7px;
+}
+
+.button:before {
+  border: 4px solid #f0eeef;
+  transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+    transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+}
+
+.button:after {
+  border: 4px solid #96daf0;
+  transform: scale(1.3);
+  transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 0;
+}
+
+.button:hover:before,
+.button:focus:before {
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.button:hover:after,
+.button:focus:after {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+    transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+}
+
+.button-box {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.button-elem {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 17px 18px 0 18px;
+  transform: rotate(180deg);
+  fill: #f0eeef;
+}
+
+.button:hover .button-box,
+.button:focus .button-box {
+  transition: 0.4s;
+  transform: translateX(-56px);
+}
+
+
+
+.container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container h1{
+  font-family: "Delicious Handrawn", monospace;
+  letter-spacing: 5px;
+  font-size: 4em;
+  color: #fff;
+  text-align: center;
+  margin: 30px 0;
+}
+
+
+
+
+footer {
+  width: 100%;
+  text-align: center;
+  height: 10vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #ffffff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media screen and (max-width:900px) {
+  .container{
+    height: 90vh;
+  }
+  
+}

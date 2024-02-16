@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="icon.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Handjet:wght@100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  </style>
+  <title>TIC TAC TOE</title>
+</head>
+<body>
+  
+  <div class="container ml">
+    <h1>TIC TAC TOE</h1>
+    <div class="turn">
+      <p id="turn">X's Turn<!-- Turn instructin here --></p>
+    </div>
+    <div class="board">
+      <div class="cell c-1" id="cell c-1"></div>
+      <div class="cell c-2" id="cell c-2"></div>
+      <div class="cell c-3" id="cell c-3"></div>
+      <div class="cell c-4" id="cell c-4"></div>
+      <div class="cell c-5" id="cell c-5"></div>
+      <div class="cell c-6" id="cell c-6"></div>
+      <div class="cell c-7" id="cell c-7"></div>
+      <div class="cell c-8" id="cell c-8"></div>
+      <div class="cell c-9" id="cell c-9"></div>
+    </div>
+    <div class="messages" id="messages">
+      <p><!-- Congratulations message here --></p>
+    </div>
+    <div class="result">
+      <p>X's Wins: 0 <!-- X's Win count --></p>
+      <p>O's Wins: 0 <!-- O's Win count --></p>
+    </div>
+    <div class="button-container btns">
+      <button class="playagain hide" id="playagain">Play Again</button>
+      <button class="resetGame" id="resetGame">Reset Game</button>
+    </div>
+</div>
+<footer>
+  <!-- copyright -->
+ <p> &copy;2023 by Diwash. All rights reserved.<br /> </p>
+  <a href="index.html"><button>Go Back To Lobby</button></a>
+  </footer>
+</body>
+<script src="multiplayer.js"></script>
+</html>
