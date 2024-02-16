@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let computerWins = 0;
   let gameBoard = ['', '', '', '', '', '', '', '', ''];
   let gameFinished = false;
+  let playerTurn = true;
 
   function checkWinner(board) {
     const winConditions = [
@@ -37,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function handleClick(cell, index) {
-    if (!gameFinished && cell.textContent === '') {
+    if (playerTurn && !gameFinished && cell.textContent === '') {
       cell.textContent = 'X';
       gameBoard[index] = 'X';
       moves++;
@@ -56,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
         playAgainButton.classList.remove('hide');
       } else {
         turnDisplay.textContent = "Computer's Turn";
+        playerTurn = false; // Disable player's turn while waiting for computer's move
         setTimeout(computerMove, 2000); // Delay computer's move by 2 seconds
       }
     }
@@ -153,6 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
       playAgainButton.classList.remove('hide');
     } else {
       turnDisplay.textContent = "Player's Turn";
+      playerTurn = true; // Enable player's turn after computer's move
     }
   }
 
@@ -165,6 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
     gameFinished = false;
     turnDisplay.textContent = "Player's Turn";
     playAgainButton.classList.add('hide');
+    playerTurn = true; // Ensure player's turn is enabled after reset
   }
 
   function updateScores() {
