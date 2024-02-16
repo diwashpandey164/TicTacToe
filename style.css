@@ -68,9 +68,7 @@ header nav a:hover::after{
   cursor: pointer;
   border: 0;
 }
-.sorry{
-  font-size: 1.2rem !important;
-}
+
 .button:before,
 .button:after {
   content: "";
